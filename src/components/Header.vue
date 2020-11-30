@@ -20,23 +20,22 @@
 </template>
 
 <script>
-import store from '@/store'
-import router from '@/router'
+import store from '@/store';
+import router from '@/router';
 
 export default {
   name: 'LoginPage',
   computed: {
     is_auth() {
-      return store.getters.is_auth
+      return store.getters.is_auth;
     }
   },
   methods: {
     logout: function () {
       store.dispatch('logout').then(() => {
-        console.log('logout');
         router.push({path: 'login'});
       });
     }
   }
-}
+};
 </script>

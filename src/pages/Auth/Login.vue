@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import router from '@/router'
-import store from '@/store'
+import router from '@/router';
+import store from '@/store';
 
 export default {
   name: 'LoginPage',
@@ -24,7 +24,7 @@ export default {
   },
   computed: {
     is_auth() {
-      return store.getters.is_auth
+      return store.getters.is_auth;
     }
   },
   methods: {
@@ -38,5 +38,5 @@ export default {
       });
     }
   }
-}
+};
 </script>
