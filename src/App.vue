@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <app-header />
+    <Header />
     <router-view />
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
     store.commit('initStore')
   },
   components: {
-    'app-header': Header
+    Header: Header
   }
 };
 </script>

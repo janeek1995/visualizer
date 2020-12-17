@@ -5,11 +5,11 @@
     </div>
     <nav>
       <ul>
-        <li v-if="!is_auth">
-          <router-link to="/login">Log In</router-link>
-        </li>
         <li v-if="is_auth">
-          <router-link to="/dashboard">Dashboard</router-link>
+          <router-link :to="{name: 'Dashboard'}">Dashboard</router-link>
+        </li>
+        <li v-else>
+          <router-link :to="{name: 'Login'}">Log In</router-link>
         </li>
       </ul>
       <button type="button" 
