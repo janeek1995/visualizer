@@ -8,14 +8,13 @@
 <script>
 import Header from '@/components/Header.vue';
 import store from '@/store';
-
 export default {
   name: 'App',
-  setup () {
-    store.commit('initStore')
-  },
   components: {
-    Header: Header
+    Header
+  },
+  setup () {
+    store.commit('initStore');
   }
-};
+}
 </script>

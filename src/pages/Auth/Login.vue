@@ -1,13 +1,15 @@
 <template>
-  <h1>Login Page</h1>
-  <form @submit.prevent="login">
-    <label>User name</label>
-    <input required v-model="username" type="text" placeholder="Username"/>
-    <label>Password</label>
-    <input required v-model="password" type="password" placeholder="Password"/>
-    <hr/>
-    <button type="submit">Login</button>
-  </form>
+  <div>
+    <h1>Login Page</h1>
+    <form @submit.prevent="login">
+      <label>User name</label>
+      <input required v-model="username" type="text" placeholder="Username"/>
+      <label>Password</label>
+      <input required v-model="password" type="password" placeholder="Password"/>
+      <hr/>
+      <button type="submit">Login</button>
+    </form>
+  </div>
 </template>
 
 <script>

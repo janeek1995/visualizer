@@ -1,6 +1,8 @@
-import { createStore } from 'vuex';
+import Vue from 'vue';
+import Vuex from 'vuex';
 import axios from 'axios';
 
+Vue.use(Vuex);
 
 const state = {
   auth_token: null
@@ -61,7 +63,7 @@ const getters = {
   is_auth: state => !!state.auth_token,
 }
 
-export default createStore({
+export default new Vuex.Store({
   state,
   actions,
   mutations,
