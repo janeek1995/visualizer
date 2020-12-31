@@ -13,8 +13,15 @@ export default {
   components: {
     Header
   },
-  setup () {
+  created () {
     store.commit('initStore');
   }
 }
 </script>
+
+<style>
+body {
+  font-family: 'Roboto', sans-serif;
+}
+</style>
+
