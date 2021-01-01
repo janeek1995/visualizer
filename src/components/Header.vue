@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <md-toolbar>
 
     <router-link tag="button"
                  to="/"
@@ -15,7 +15,7 @@
                  v-if="!is_auth">Log In</router-link>
     <md-button v-on:click="logout"
                v-if="is_auth">Logout</md-button>
-  </header>
+  </md-toolbar>
 </template>
 
 <script>

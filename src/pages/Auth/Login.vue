@@ -8,7 +8,8 @@
       <label>Password</label>
       <md-input v-model="password"></md-input>
     </md-field>
-    <md-button v-on:click="login">Login</md-button>
+    <md-button class="md-raised md-primary"
+               v-on:click="login">Login</md-button>
   </div>
 </template>
 
