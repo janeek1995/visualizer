@@ -1,14 +1,14 @@
 <template>
   <div>
-    <h1>Login Page</h1>
-    <form @submit.prevent="login">
-      <label>User name</label>
-      <input required v-model="username" type="text" placeholder="Username"/>
+    <md-field>
+      <label>Username</label>
+      <md-input v-model="username"></md-input>
+    </md-field>
+    <md-field>
       <label>Password</label>
-      <input required v-model="password" type="password" placeholder="Password"/>
-      <hr/>
-      <button type="submit">Login</button>
-    </form>
+      <md-input v-model="password"></md-input>
+    </md-field>
+    <md-button v-on:click="login">Login</md-button>
   </div>
 </template>
 
