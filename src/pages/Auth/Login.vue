@@ -8,21 +8,20 @@
       <label>Password</label>
       <md-input v-model="password"></md-input>
     </md-field>
-    <md-button class="md-raised md-primary"
-               v-on:click="login">Login</md-button>
+    <md-button class="md-raised md-primary" v-on:click="login">Login</md-button>
   </div>
 </template>
 
 <script>
-import router from '@/router';
-import store from '@/store';
+import router from "@/router";
+import store from "@/store";
 
 export default {
-  name: 'LoginPage',
+  name: "LoginPage",
   data: function() {
     return {
-      username: '',
-      password: '',
+      username: "",
+      password: ""
     };
   },
   computed: {
@@ -31,13 +30,13 @@ export default {
     }
   },
   methods: {
-    login: function () {
+    login: function() {
       let payload = {
         username: this.username,
         password: this.password
       };
-      store.dispatch('login', payload).then(() => {
-        router.push({path: 'dashboard'}); 
+      store.dispatch("login", payload).then(() => {
+        router.push({ path: "dashboard" });
       });
     }
   }
