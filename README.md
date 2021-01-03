@@ -5,7 +5,7 @@
 Graphical User Interface for Monolith
 
 ## Linter
-.js and .vue code is being fotmatted with [Prettier](https://prettier.io/).  
-Run auto-foramtter with:  
+.js and .vue code is being formatted with [Prettier](https://prettier.io/).  
+Run with:  
 `npm run lint`
 
