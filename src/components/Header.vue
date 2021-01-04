@@ -1,22 +1,26 @@
 <template>
   <md-toolbar>
-    <router-link tag="button" to="/" class="md-button">Minusz labs</router-link>
-    <router-link
-      tag="button"
-      :to="{ name: 'Dashboard' }"
-      class="md-button"
-      v-if="is_auth"
-      >Dashboard</router-link
-    >
-    <!--  Auth -->
-    <router-link
-      tag="button"
-      :to="{ name: 'Login' }"
-      class="md-button"
-      v-if="!is_auth"
-      >Log In</router-link
-    >
-    <md-button v-on:click="logout" v-if="is_auth">Logout</md-button>
+    <router-link to="/" class="md-button site-logo"
+      ><img src="@/assets/minusz_logo.png"
+    /></router-link>
+    <nav>
+      <router-link
+        tag="button"
+        :to="{ name: 'Dashboard' }"
+        class="md-button"
+        v-if="is_auth"
+        >Dashboard</router-link
+      >
+      <!--  Auth -->
+      <router-link
+        tag="button"
+        :to="{ name: 'Login' }"
+        class="md-button"
+        v-if="!is_auth"
+        >Log In</router-link
+      >
+      <md-button v-on:click="logout" v-if="is_auth">Logout</md-button>
+    </nav>
   </md-toolbar>
 </template>
 
@@ -40,3 +44,12 @@ export default {
   }
 };
 </script>
+
+<style>
+nav {
+  margin-left: auto;
+}
+.site-logo {
+  height: auto !important;
+}
+</style>
