@@ -3,3 +3,9 @@
 
 # visualizer
 Graphical User Interface for Monolith
+
+## Linter
+.js and .vue code is being formatted with [Prettier](https://prettier.io/).  
+Run with:  
+`npm run lint`
+
