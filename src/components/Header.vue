@@ -1,5 +1,5 @@
 <template>
-  <md-toolbar>
+  <md-toolbar v-if="is_visible">
     <router-link to="/" class="md-button site-logo"
       ><img src="@/assets/minusz_logo.png"
     /></router-link>
@@ -33,6 +33,9 @@ export default {
   computed: {
     is_auth() {
       return store.getters.is_auth;
+    },
+    is_visible() {
+      return this.$route.name !== "Login";
     }
   },
   methods: {
