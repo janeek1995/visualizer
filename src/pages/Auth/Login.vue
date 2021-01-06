@@ -12,6 +12,11 @@
         <label>Password</label>
         <md-input v-model="password" type="password"></md-input>
       </md-field>
+      <md-list>
+        <md-list-item v-for="msg in error_messages" :key="msg">
+          <span class="error_msg">{{ msg }}</span>
+        </md-list-item>
+      </md-list>
     </md-card-content>
     <md-card-actions>
       <md-button class="md-raised md-primary login" v-on:click="login"
@@ -30,7 +35,8 @@ export default {
   data: function() {
     return {
       email: "",
-      password: ""
+      password: "",
+      error_messages: []
     };
   },
   computed: {
@@ -40,13 +46,19 @@ export default {
   },
   methods: {
     login: function() {
+      let self = this;
       let payload = {
         email: this.email,
         password: this.password
       };
-      store.dispatch("login", payload).then(() => {
-        router.push({ path: "dashboard" });
-      });
+      store
+        .dispatch("login", payload)
+        .then(function() {
+          router.push({ path: "dashboard" });
+        })
+        .catch(function(error) {
+          self.error_messages = error.data.non_field_errors;
+        });
     }
   }
 };
@@ -63,5 +75,8 @@ export default {
 }
 .login {
   margin: 0px auto !important;
+}
+.error_msg {
+  color: red;
 }
 </style>
