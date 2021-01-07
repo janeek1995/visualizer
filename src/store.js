@@ -10,17 +10,20 @@ const state = {
 
 const actions = {
   login({ commit }, auth_data) {
-    axios
-      .post("/api/v1/auth/token/login", auth_data)
-      .then(function(response) {
-        let auth_token = response.data.auth_token;
-        commit("authUser", auth_token);
-        localStorage.setItem("auth_token", auth_token);
-      })
-      .catch(function(error) {
-        console.log(error);
-        localStorage.removeItem("auth_token");
-      });
+    return new Promise((resolve, reject) => {
+      axios
+        .post("/api/v1/auth/token/login", auth_data)
+        .then(function(response) {
+          let auth_token = response.data.auth_token;
+          commit("authUser", auth_token);
+          localStorage.setItem("auth_token", auth_token);
+          resolve(response);
+        })
+        .catch(function(error) {
+          localStorage.removeItem("auth_token");
+          reject(error.response);
+        });
+    });
   },
 
   logout({ commit, state }) {
