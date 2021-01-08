@@ -90,7 +90,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .md-card {
   width: 600px;
   margin: 40px auto;
@@ -105,6 +105,5 @@ export default {
 .error_msg {
   color: red;
   font-size: 14px;
-  text-align: center;
 }
 </style>

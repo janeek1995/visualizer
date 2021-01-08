@@ -1,5 +1,5 @@
 <template>
-  <h1>Minusz Labs. Dashboard Page.</h1>
+  <h1>Dashboard Page.</h1>
 </template>
 
 <script>

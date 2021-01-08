@@ -83,6 +83,5 @@ export default {
 .error_msg {
   color: red;
   font-size: 14px;
-  text-align: center;
 }
 </style>
