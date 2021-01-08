@@ -17,6 +17,10 @@
           <span class="error_msg">{{ msg }}</span>
         </md-list-item>
       </md-list>
+      <p>
+        Don't have an account?
+        <router-link :to="{ name: 'Register' }">Register</router-link>.
+      </p>
     </md-card-content>
     <md-card-actions>
       <md-button class="md-raised md-primary login" v-on:click="login"
@@ -78,5 +82,7 @@ export default {
 }
 .error_msg {
   color: red;
+  font-size: 14px;
+  text-align: center;
 }
 </style>

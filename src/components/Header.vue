@@ -19,6 +19,13 @@
         v-if="!is_auth"
         >Log In</router-link
       >
+      <router-link
+        tag="button"
+        :to="{ name: 'Register' }"
+        class="md-button"
+        v-if="!is_auth"
+        >Register</router-link
+      >
       <md-button v-on:click="logout" v-if="is_auth">Logout</md-button>
     </nav>
   </md-toolbar>
@@ -30,12 +37,17 @@ import router from "@/router";
 
 export default {
   name: "LoginPage",
+  data: function() {
+    return {
+      routes_without_header: ["Login", "Register"]
+    };
+  },
   computed: {
     is_auth() {
       return store.getters.is_auth;
     },
     is_visible() {
-      return this.$route.name !== "Login";
+      return !this.routes_without_header.includes(this.$route.name);
     }
   },
   methods: {
