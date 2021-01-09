@@ -1,4 +1,4 @@
-FROM node:15.0.1-stretch
+FROM node:14.15.4-stretch
 
 COPY . /app
 WORKDIR /app

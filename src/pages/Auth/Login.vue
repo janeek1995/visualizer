@@ -68,20 +68,20 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .md-card {
   width: 600px;
   margin: 40px auto;
   padding: 20px;
-}
-.md-card-media {
-  margin: 20px 10px;
-}
-.login {
-  margin: 0px auto !important;
-}
-.error_msg {
-  color: red;
-  font-size: 14px;
+  .md-card-media {
+    margin: 20px 10px;
+  }
+  .login {
+    margin: 0px auto !important;
+  }
+  .error_msg {
+    color: red;
+    font-size: 14px;
+  }
 }
 </style>
