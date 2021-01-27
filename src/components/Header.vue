@@ -11,6 +11,9 @@
         v-if="is_auth"
         >Dashboard</router-link
       >
+      <router-link tag="button" :to="{ name: 'Blog' }" class="md-button"
+        >Blog</router-link
+      >
       <!--  Auth -->
       <router-link
         tag="button"
